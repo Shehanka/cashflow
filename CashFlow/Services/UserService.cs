@@ -11,6 +11,7 @@ namespace CashFlow.Services
         static HttpClient client = new HttpClient();
         public UserService()
         {
+            this.client.BaseAddress = new Uri("http://localhost:5000/api/");
         }
     }
 }
