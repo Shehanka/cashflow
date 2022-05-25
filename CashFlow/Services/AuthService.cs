@@ -16,7 +16,7 @@ namespace CashFlow.Services
                 .Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }
 
-        public async User Login(string username, string password)
+        public async Task<User> Login(string username, string password)
         {
             var response =
                 await client
@@ -29,7 +29,7 @@ namespace CashFlow.Services
             return null;
         }
 
-        public async bool Register(User user)
+        public async Task<bool> Register(User user)
         {
             var response =
                 await client
